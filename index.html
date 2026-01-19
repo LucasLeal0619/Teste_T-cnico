@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <title>Teste Agência Trii</title> 
+
+  <link rel="stylesheet" href="index.css">
+  
+</head>
+
+<body>
+
+  <div class="Container">
+    <!-- Container principal que centraliza e delimita o formulário -->
+
+    <section class="Header">
+      <!-- Cabeçalho do formulário -->
+      <h2>Peça seu orçamento agora mesmo!</h2>
+      <!-- Título principal exibido ao usuário -->
+    </section>
+
+    <form class="form" id="form-orcamento">
+      <!-- Formulário principal | id usado para validação via JavaScript -->
+
+      <div class="nome-email">
+        <!-- Linha com dois campos lado a lado -->
+
+        <div class="input-group">
+          <!-- Grupo do input Nome com label flutuante -->
+
+          <input 
+            type="text" 
+            id="nome" 
+            placeholder=" " 
+            required
+          >
+          <!-- Campo de texto obrigatório | placeholder vazio ativa o efeito flutuante -->
+
+          <label for="nome">Nome</label>
+          <!-- Label que sobe quando o campo está ativo ou preenchido -->
+        </div>
+
+        <input 
+          type="email" 
+          id="email" 
+          placeholder="E-mail" 
+          required
+        >
+        <!-- Campo de email obrigatório com validação automática do navegador -->
+      </div>
+
+      <div class="telefone-servico">
+        <!-- Segunda linha com dois campos lado a lado -->
+
+        <input 
+          type="text" 
+          id="telefone" 
+          placeholder="Telefone" 
+          required
+        >
+        <!-- Campo de telefone obrigatório -->
+
+        <select id="servico" required>
+          <!-- Campo select obrigatório -->
+
+          <option value="">
+            Escolha o serviço que deseja
+          </option>
+          <!-- Opção vazia impede envio sem seleção -->
+
+          <option value="SEO">SEO</option>
+          <option value="ADS">Gestão de Google ADS</option>
+          <option value="Redes">Gestão de redes sociais</option>
+          <option value="Marketing">Marketing digital para aumento das vendas</option>
+        </select>
+      </div>
+
+      <div class="mensagem">
+        <!-- Área de mensagem -->
+
+        <textarea 
+          id="mensagem" 
+          placeholder="Mensagem" 
+          required
+        ></textarea>
+        <!-- Campo de texto longo obrigatório -->
+      </div>
+
+      <div class="botao">
+        <!-- Container do botão para alinhamento à direita -->
+
+        <button type="submit">Enviar</button>
+        <!-- Botão que envia o formulário -->
+      </div>
+
+    </form>
+  </div>
+
+  <script src="index.js"></script>
+  
+
+</body>
+</html>

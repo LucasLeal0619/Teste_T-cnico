@@ -1,0 +1,162 @@
+/* =========================
+   RESET GLOBAL E FONTE
+   ========================= */
+
+/* Remove inconsistências de tamanho e define fonte padrão */
+* {
+  box-sizing: border-box;              /* Inclui padding e borda no cálculo de largura/altura */
+  font-family: Arial, Helvetica, sans-serif; /* Fonte padrão do site */
+}
+
+/* =========================
+   BODY (FUNDO E CENTRALIZAÇÃO)
+   ========================= */
+
+body {
+  background: #00bfff;                 /* Cor de fundo azul */
+  margin: 0;                           /* Remove margem padrão do navegador */
+  padding: 0;                          /* Remove padding padrão */
+  min-height: 100vh;                   /* Altura mínima igual à altura da tela */
+  display: grid;                       
+  place-items: center;                 /* Centraliza o formulário vertical e horizontalmente */
+}
+
+/* =========================
+   CONTAINER DO FORMULÁRIO
+   ========================= */
+
+.Container {
+  background: #fff;                    /* Fundo branco do formulário */
+  width: 100%;                         /* Ocupa toda a largura disponível */
+  max-width: 800px;                    /* Limita a largura para ficar mais "quadrado" */
+  padding: 40px;                       /* Espaçamento interno */
+  border-radius: 12px;                 /* Cantos arredondados */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra para dar destaque */
+  text-align: center;                  /* Centraliza textos internos */
+}
+
+/* =========================
+   TÍTULO
+   ========================= */
+
+.Header h2 {
+  color: #555;                         /* Cinza escuro */
+  font-weight: 600;                    /* Semi-negrito */
+  margin-bottom: 30px;                 /* Espaço abaixo do título */
+}
+
+/* =========================
+   LINHAS COM DOIS CAMPOS
+   ========================= */
+
+.nome-email,
+.telefone-servico {
+  display: flex;                       /* Coloca os inputs lado a lado */
+  gap: 12px;                           /* Espaço entre os campos */
+  margin-bottom: 12px;                 /* Espaço inferior */
+}
+
+/* Faz os campos ocuparem o mesmo tamanho */
+.nome-email input,
+.telefone-servico input,
+.telefone-servico select {
+  flex: 1;
+}
+
+/* =========================
+   INPUTS, SELECT E TEXTAREA
+   ========================= */
+
+input,
+select,
+textarea {
+  width: 100%;                         /* Ocupa toda a largura do container */
+  padding: 12px;                       /* Espaçamento interno */
+  border: 1px solid #e0e0e0;           /* Borda clara */
+  border-radius: 6px;                  /* Cantos arredondados */
+  outline: none;                       /* Remove contorno padrão */
+  color: #666;                         /* Cor do texto digitado */
+}
+
+/* Borda azul quando o campo está ativo */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #00bfff;
+}
+
+/* =========================
+   TEXTAREA
+   ========================= */
+
+textarea {
+  height: 100px;                       /* Altura fixa */
+  resize: none;                        /* Impede redimensionamento */
+}
+
+/* =========================
+   BOTÃO
+   ========================= */
+
+.botao {
+  display: flex;
+  justify-content: flex-end;            /* Alinha o botão à direita */
+  margin-top: 12px;
+}
+
+/* Estilo visual do botão */
+button {
+  background: #0076be;                 /* Azul */
+  color: #fff;                         /* Texto branco */
+  border: none;                        /* Remove borda */
+  padding: 12px 35px;                  /* Tamanho do botão */
+  cursor: pointer;                     /* Cursor de clique */
+  border-radius: 6px;                  /* Cantos arredondados */
+  font-weight: bold;                   /* Texto em negrito */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);/* Sombra leve */
+  transition: background 0.3s;          /* Animação suave */
+}
+
+/* Efeito hover do botão */
+button:hover {
+  background: #0033cc;                 /* Azul mais escuro */
+}
+
+/* =========================
+   INPUT COM LABEL FLUTUANTE
+   ========================= */
+
+.input-group {
+  position: relative;                  /* Referência para o label absoluto */
+  flex: 1;
+}
+
+/* Label que começa como placeholder */
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: #999;                         /* Cinza claro */
+  transition: all 0.2s ease;           /* Animação suave */
+  pointer-events: none;                /* Não clicável */
+  background: white;                   /* Cobre a borda do input */
+  padding: 0 5px;
+}
+
+/* Quando o input está ativo ou preenchido */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;                          /* Move o label para cima */
+  left: 10px;
+  font-size: 12px;                     /* Diminui o texto */
+  color: #0076be;                      /* Azul */
+}
+
+/* =========================
+   ESTILO DE ERRO DE CAMPO
+   ========================= */
+
+/* Classe usada para indicar campo inválido */
+.erro-campo {
+  border: 2px solid #ff0000 !important; /* Borda vermelha */
+}
