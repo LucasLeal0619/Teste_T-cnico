@@ -1,0 +1,38 @@
+Teste Técnico - Formulário de Orçamento
+Este repositório contém a resolução do teste técnico para a vaga de desenvolvedor na Agência Trii. O projeto consiste em um formulário de orçamento responsivo com validações em JavaScript.
+
+🚀 Tecnologias Utilizadas
+HTML5: Estruturação semântica do formulário.
+
+CSS3: Estilização moderna, uso de Flexbox/Grid e efeito de label flutuante.
+
+JavaScript (Vanilla): Manipulação de DOM para validação de campos e feedback de sucesso sem dependências externas.
+
+🛠️ Funcionalidades
+Validação em Tempo Real: O formulário verifica se todos os campos foram preenchidos antes de permitir o envio.
+
+Feedback Visual de Erro: Campos vazios recebem um destaque visual (borda vermelha) para orientar o usuário.
+
+Efeito de Label Flutuante: Design moderno no campo "Nome" que melhora a experiência do usuário.
+
+Feedback de Sucesso: Exibição de mensagem de confirmação e limpeza automática dos campos após o envio bem-sucedido.
+
+Responsividade: Layout adaptado para diferentes tamanhos de tela.
+
+📁 Estrutura de Arquivos
+index.html: Estrutura do formulário e vinculação de scripts/estilos.
+
+index.css: Definições visuais, resets de estilo e animações de campos.
+
+index.js: Lógica de validação e controle do evento de submit.
+
+🔧 Como Rodar o Projeto
+Faça o clone do repositório ou baixe os arquivos.
+
+Abra o arquivo index.html diretamente em qualquer navegador moderno (Chrome, Firefox, Edge, etc.).
+
+Preencha os campos e teste a validação clicando em "Enviar".
+
+Candidato: Lucas Eduardo Ferreira Leal
+
+LinkedIn: www.linkedin.com/in/lucas-eduardo-5221542a2
